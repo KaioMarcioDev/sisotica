@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Registro</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar</h1>
+        <form action="/auth/register" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nivel_acesso">Nível de Acesso:</label>
+                <select id="nivel_acesso" name="nivel_acesso">
+                    <option value="admin_master">Admin Master</option>
+                    <option value="admin_funcionario">Admin Funcionário</option>
+                    <option value="admin_cliente">Admin Cliente</option>
+                </select>
+            </div>
+            
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
