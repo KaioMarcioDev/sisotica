@@ -93,7 +93,7 @@ const login = async (req, res) => {
         }
 
         // Verificar sessão do usuário
-        req.session.userid = user.id;
+        req.session.userId = user.id;
         req.session.role = user.nivel_acesso;
 
         // Redireciona conforme o nível de acesso

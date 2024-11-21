@@ -20,6 +20,7 @@ router.get("/admin_funcionario", requireLogin, restrictToRole("admin_funcionario
     res.sendFile('admin_funcionario.html', { root: 'src/views' });
     })
 router.get("/admin_cliente", requireLogin, restrictToRole("admin_cliente"), (req, res) =>{
+    console.log("Sessão válida para admin_cliente:", req.session);
     res.sendFile('admin_cliente.html', { root: 'src/views' });
 })
 export default router

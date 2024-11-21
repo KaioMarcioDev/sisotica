@@ -2,7 +2,7 @@
 // src/middleware/authMiddleware.js
 export const requireLogin = (req, res, next) => {
     console.log("Verificando sessão:", req.session); // Log para verificação
-    if (!req.session || !req.session.userid) {
+    if (!req.session || !req.session.userId) {
         return res.status(401).json({ message: "Você precisa estar logado para acessar esta página" });
     }
     next();
